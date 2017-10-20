@@ -2,7 +2,6 @@ var menu_trigger = document.getElementById('modal-icon')
 var menu_popup = document.getElementById('main-menu')
 var menu_close = document.getElementById("main-menu-close")
 
-alert(menu_trigger)
 menu_trigger.onclick = function () {
 	menu_popup.style.display = 'block'
 }
