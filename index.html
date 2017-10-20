@@ -16,49 +16,50 @@
 	<body>
 		<div id="header">
 			<!-- Put logo here -->
-
 			<img id="modal-icon" src="icons/menu-alt-512.png"/>
-		</div>
 
-		<div id="main-menu" class="modal">
-			<div id="main-menu-content" class="modal-content">
-				<span id="main-menu-close" class="close">&times;</span><br/><br/>
-				<a href="about.html">About</a>
-				<a href="register.html">Register</a>
+			<div id="main-menu" class="modal">
+				<div id="main-menu-content" class="modal-content">
+					<span id="main-menu-close" class="close">&times;</span><br/><br/>
+					<a href="about.html">About</a>
+					<a href="register.html">Register</a>
+				</div>
 			</div>
 		</div>
 
-		<h1 id="countdown"></h1>
+		<div id="body">
+			<h1 id="countdown"></h1>
+		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 		<script src="js/main.js"></script>
 		<script>
-			var menu_trigger = document.getElementById('modal-icon')
-			var menu_popup = document.getElementById('main-menu')
-			var menu_close = document.getElementById("main-menu-close")
+			var menu_trigger = document.getElementById('modal-icon');
+			var menu_popup = document.getElementById('main-menu');
+			var menu_close = document.getElementById("main-menu-close");
 
 			menu_trigger.onclick = function () {
-				menu_popup.style.display = 'block'
+				menu_popup.style.display = 'block';
 			}
 
 			menu_close.onclick = function () {
-				menu_popup.style.display = 'none'
+				menu_popup.style.display = 'none';
 			}
-			
-			var target_date = new Date("Nov 23, 2017 08:00:00").getTime()
+
+			var target_date = new Date("Nov 23, 2017 08:00:00").getTime();
 			var x = setInterval(function() {
-				var now = new Date().getTime()
-				var distance = target_date - now
+				var now = new Date().getTime();
+				var distance = target_date - now;
 
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24))
-				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-				var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-				document.getElementById("countdown").innerHTML = days + "days " + hours + "hours " + minutes + "minutes " + seconds + "seconds ";
-			}, 1000)
+				document.getElementById("countdown").innerHTML = days + " days " + hours + ":" + minutes + ":" + seconds;
+			}, 1000);
 		</script>
 	</body>
 </html>

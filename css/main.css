@@ -84,14 +84,23 @@ textarea {
 }
 
 #header {
-	margin-left: 5%;
-	margin-right: 5%;
+	width: 100%;
+	position: fixed;
+}
+
+#body {
+	width: 100%;
+	position: fixed;
 }
 
 #modal-icon {
 	width: 10%;
 	height: 10%;
 	float: right;
+}
+
+#countdown {
+	text-align: center;
 }
 
 .modal {
@@ -130,6 +139,8 @@ textarea {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+
 
 
 
