@@ -55,7 +55,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Rubik+Mono+One|Work+Sans:400,700,800');
 
 #container{
 	position:absolute;
@@ -66,6 +66,41 @@ textarea {
 	left:0;
 	bottom:0;
 	right:0;
+}
+
+#countdown{
+    color:#f7f3e8;
+}
+
+#countdown a{
+    padding:.5em;
+    display:inline-block;
+    font-family: "Libre Baskerville";
+    font-size:24px;
+    color:white;
+    text-decoration: none;
+    background: #e6472a;
+}
+
+#countdown a:hover{
+    background:#fabd40;
+}
+
+#countdown h1{
+    font-family:"Work Sans";
+    font-weight:400;
+    background-image:url(../img/dethighlight.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    display:inline-block;   
+}
+
+a{
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -ms-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
 }
 
 .box{
@@ -84,14 +119,17 @@ textarea {
 }
 
 #header {
-	margin-left: 5%;
-	margin-right: 5%;
+    position:absolute;
+    z-index:99;
+    right:0;
+    margin:.5em;
 }
 
 
 /* navigation modal */
 
 #modal-icon {
+    z-index:99;
 	width: 10%;
 	height: 10%;
 	float: right;
@@ -178,14 +216,181 @@ textarea {
     width:100%;
 }
 
+.main-navigation a{
+    display:inline-block;
+    font-family:"Work Sans";
+    color: #071156;
+    font-weight:900;
+    text-decoration: none;
+    margin:1em;
+}
+
+.main-navigation h3{
+    margin: 0;
+    font-weight:800;
+    font-size:48px;
+}
+
+.main-navigation a:hover{
+    color:#e55656;
+}
+
+.navigation-details{
+    color: #2e2e2f;
+    text-decoration: none;
+    font-weight:300;
+}
+
+/* ==========================================================================
+   STYLES
+   ========================================================================== */
+
+.reg-bundle{
+    width:80%;
+    padding:1em;
+    left:50%;
+    height:250px;
+    max-height:250px;
+    margin-left:-40%;
+    position:relative;
+}
+
+.reg-details strong{
+    padding:.5em;
+    margin-bottom:0;
+    margin-right:5px;
+    background:#f2b964;
+    border-radius: 20px;
+    font-family: "Work Sans";
+    font-size:12px;
+    font-weight: 400;
+}
+
+.reg-projectimg{
+    position:absolute;
+    max-width:40%;
+    overflow:hidden;
+}
+
+.reg-projectimg img{
+    height:250px;
+}
+
+.reg-projectbox{
+    position:absolute;
+    width:400px;
+    background:#faf8f4;
+    padding:1em;
+    z-index:9;
+}
+
+.reg-projectbox a{
+    font-family:"Work Sans";
+    font-weight:800;
+    display:inline-block;
+    width:100px;
+    text-align: center;
+    
+}
+
+.reg-projectbox h2{
+    font-family:"Rubik Mono One";
+    margin: 0;
+}
+
+.reg-projectbox p{
+    font-family:"Work Sans";
+    margin-top: .5em;
+}
+
+
+/* =========================
+            MENU
+   ========================= */
+
+#main-menu{
+    z-index:9999;
+}
+
 /* ==========================================================================
    FORMATTING STYLES
    ========================================================================== */
 
 h1{
-    font-family: "Rubik Mono One";
+    font-family: 'Libre Baskerville', serif;
     text-align: center;
-    
+    color: #f7f3e8;
+    font-weight:100;
+    letter-spacing:1px;
+}
+
+/* =========================
+   ANIMATION STUFF AYAAYAYAY 
+   ========================= */
+
+.anim-shape{  
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index: -9999;
+    background:transparent url(../img/moveyshapey2.png) repeat top center;
+    -moz-animation:move-shapey 400s linear infinite;
+    -ms-animation:move-shapey 400s linear infinite;
+    -o-animation:move-shapey 400s linear infinite;
+    -webkit-animation:move-shapey 400s linear infinite;
+    animation:move-shapey 400s linear infinite;
+}
+
+
+.anim-dotty{  
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index: -9999;
+    background:transparent url(../img/moveydot.png) repeat top center;
+    -moz-animation:move-dotty 400s linear infinite;
+    -ms-animation:move-dotty 400s linear infinite;
+    -o-animation:move-dotty 400s linear infinite;
+    -webkit-animation:move-dotty 400s linear infinite;
+    animation:move-dotty     400s linear infinite;
+}
+
+
+
+@keyframes move-dotty {
+ from {background-position:0 0;}
+ to {background-position:10000px -5000px;}
+}
+@-webkit-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:10000px -5000px;}
+}
+@-moz-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:10000px -5000px;}
+}
+@-ms-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:10000px -5000px;}
+}
+
+@keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-shapey {
+ from {background-position:0 0;}
+ to {background-position:-10000px 5000px;}
 }
 
 
