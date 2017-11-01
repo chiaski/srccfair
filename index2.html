@@ -13,7 +13,7 @@
 
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body style="background:#faf8f4;">
+	<body>
 		<div id="header">
 			<!-- Put logo here -->
 
@@ -31,31 +31,11 @@
         <div id="container">
         
             <div class="box" style="height:100%;">
-                <div class="intro-box">
-                    <h1>Register</h1>
-                    <p style="p-main">Lorem ipsum dolor sit amet</p>
-                </div>
-                
-                <div class="register-area">
-                <h1>Categories</h1>
-                <center>
-                <p>Lorem ipsum dolor sit amet</p>
-                <input type="text"><br />
-                <input type="button" text="Search" />
-                <!-- Search goes to new page and anchors to relevant area -->
-                    <br />
-                <a href="register/socialaction.php"><img src="img/iconSA.png" /></a>
-                <a href="register/socialaction.php"><img src="img/iconArt.png" /></a><br />
-                <a href="register/socialaction.php"><img src="img/iconPerforming.png" /></a>
-                <a href="register/socialaction.php"><img src="img/iconMisc.png" /></a>
-                </center>
-                
-            
+                <div class="within">
+                    <h1 id="countdown"></h1>
                     
                     
-                
                 </div>
-                
             </div>
         
         
@@ -65,6 +45,30 @@
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 		<script src="js/main.js"></script>
-
+		<script>
+			var menu_trigger = document.getElementById('modal-icon')
+			var menu_popup = document.getElementById('main-menu')
+			var menu_close = document.getElementById("main-menu-close")
+			menu_trigger.onclick = function () {
+				$("#main-menu").fadeIn();
+			}
+            
+            
+            
+			menu_popup.onclick = function () {
+				$("#main-menu").fadeOut("slow");
+			}
+			
+			var target_date = new Date("Nov 23, 2017 08:00:00").getTime()
+			var x = setInterval(function() {
+				var now = new Date().getTime()
+				var distance = target_date - now
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+				document.getElementById("countdown").innerHTML = days + "days " + hours + "hours " + minutes + "minutes " + seconds + "seconds ";
+			}, 1000)
+		</script>
 	</body>
 </html>
