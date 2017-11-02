@@ -1,19 +1,5 @@
 new WOW().init();
 
-var menu_trigger = document.getElementById('modal-icon')
-var menu_popup = document.getElementById('main-menu')
-var menu_close = document.getElementById("main-menu-close")
-
-menu_trigger.onclick = function () {
-    alert("click");
-    $("#main-menu").fadeIn();
-}
-            
-            
-menu_popup.onclick = function () {
-    $("#main-menu").fadeOut("slow");
-}
-
 
 // Select all links with hashes
 $('a[href*="#"]')
@@ -34,7 +20,7 @@ $('a[href*="#"]')
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        $('html, body').animate({
+        $('html, body, .container').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
           // Callback after animation
@@ -51,3 +37,18 @@ $('a[href*="#"]')
       }
     }
   });
+
+var menu_trigger = document.getElementById('modal-icon')
+var menu_popup = document.getElementById('main-menu')
+var menu_close = document.getElementById("main-menu-close")
+
+menu_trigger.onclick = function () {
+    alert("click");
+    $("#main-menu").fadeIn();
+}
+            
+            
+menu_popup.onclick = function () {
+    $("#main-menu").fadeOut("slow");
+}
+

@@ -108,6 +108,16 @@ a{
     transition: all .4s linear;
 }
 
+.social-bottom{
+    display:block;
+    background: #eebe38;
+    padding:1em;
+    box-sizing: border-box;
+    bottom:0px;
+    width:100%;
+    text-align: center;
+}
+
 .box{
 	display:block;
 	max-width:100%;
@@ -247,7 +257,7 @@ a{
 .main-navigation h3{
     margin: 0;
     font-weight:800;
-    font-size:48px;
+    font-size:38px;
 }
 
 .main-navigation a:hover{
