@@ -93,6 +93,7 @@ textarea {
     background-position: bottom;
     background-repeat: repeat-x;
     display:inline-block;   
+    font-size:22px;
 }
 
 img{
