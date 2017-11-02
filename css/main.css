@@ -95,6 +95,10 @@ textarea {
     display:inline-block;   
 }
 
+img{
+    max-width:100%;
+}
+
 a{
     -webkit-transition: all .4s linear;
     -moz-transition: all .4s linear;
