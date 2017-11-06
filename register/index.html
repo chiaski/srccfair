@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="../css/main.css">
 
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js"></script>
 	</head>
 	<body style="background:#faf8f4;">
 		<div id="header">
@@ -67,6 +68,53 @@
         
         </div>
 
+		<script type='text/javascript'>
+			// Attaches each regbox to a unique id for scrolling
+			// Grabs the title and description for each regbox and uses it for query
+			var queries = []
+			$(".regbox").each(function(i) {
+				$(this).attr('id', i)
+
+				title = $(this).find(".reg-header").text()
+				deets = $(this).find(".reg-deets").text()
+
+				queries.push({"title" : title,
+							  "description" : deets,
+							  "id" : i})
+			})
+
+			var fuse = new Fuse(queries, {
+				shouldSort: true,
+				includeScore: true,
+				threshold: 0.3,
+				location: 0,
+				distance: 100,
+				maxPatternLength: 32,
+				minMatchCharLength: 1,
+				keys: ["title", "description"]
+			})
+
+			// Adds the dropdown menu for possible search queries
+			// Fix with css pls make it pretty thank u
+			$("#search_input").keyup(function() {
+				var results = fuse.search($("#search_input").val())
+				total = ''
+				for(i = 0; i < results.length; i++) {
+					total += "<a href='#"+results[i].item.id+"'>"+results[i].item.title+"</a>"
+				}
+				$("#dropdown-search").html(total)
+			})
+
+			function search() {
+				// Direct search (pressing the "Search" button)
+				var results = fuse.search($("#search_input").val())
+				if(results.length > 0) {
+					// Assume we're picking the first entry in the results
+					window.location.hash = '#'+results[0].item.id
+				}
+			}
+		</script>
+		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
