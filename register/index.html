@@ -110,6 +110,7 @@
 				var results = fuse.search($("#search_input").val())
 				if(results.length > 0) {
 					// Assume we're picking the first entry in the results
+					// Results are sorted so first entry is the most accurate match
 					window.location.hash = '#'+results[0].item.id
 				}
 			}
