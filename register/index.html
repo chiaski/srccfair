@@ -100,7 +100,7 @@
 				var results = fuse.search($("#search_input").val())
 				total = ''
 				for(i = 0; i < results.length; i++) {
-					total += "<a href='#"+results[i].item.id+"'>"+results[i].item.title+"</a>"
+					total += "<a href='#"+results[i].item.id+"'>"+results[i].item.title+"</a><br/>"
 				}
 				$("#dropdown-search").html(total)
 			})
