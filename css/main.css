@@ -315,21 +315,22 @@ a{
 .reg-bundle{
     width:80%;
     padding:1em;
-    left:50%;
-    height:250px;
+    align-content: center;
+    align-self: center;
+    min-height:150px;
     max-height:250px;
-    margin-left:-40%;
     position:relative;
 }
 
 .reg-details strong{
-    padding:.5em;
+    color:black;
+    padding:.7em;
     margin-bottom:0;
     margin-right:5px;
     background:#f2b964;
     border-radius: 20px;
     font-family: "Work Sans";
-    font-size:12px;
+    font-size:9px;
     font-weight: 400;
 }
 
@@ -346,9 +347,6 @@ a{
 
 .reg-projectbox{
     position:absolute;
-    width:400px;
-    background-image:url(../img/bgdark.jpg);
-    padding:1em;
     z-index:9;
     color: #fff;
 }
@@ -371,7 +369,7 @@ a{
 
 .reg-projectbox p{
     font-family:"Work Sans";
-    margin-top: .5em;
+    margin-top: 1em;
 }
 
 .register-directory{
@@ -400,8 +398,8 @@ a{
 }
 
 
-#dropdown-search{
-    
+.register-links{
+    max-width:800px;
 }
 
 /* =========================
