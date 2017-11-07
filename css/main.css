@@ -134,7 +134,7 @@ a{
 }
 
 #header {
-    position:absolute;
+    position:fixed;
     z-index:99;
     right:0;
     margin:.5em;
@@ -194,8 +194,8 @@ a{
 .modal-content {
     position:fixed;
     top:0;
+    left:0;
 	background-color: #FEFEFE;
-	padding: 30px;
 	width: 100%;
 	height: 100%;
 	font-family: "Oxygen";
@@ -231,7 +231,45 @@ a{
     font-size:14pt;
     color: #202020;
     font-family:"Work Sans";
-    
+}
+
+.intro-register p{
+    color: #fff;
+    margin:1 em;
+    font-family: "Work Sans";
+    text-align: center;
+}
+
+.intro-register li{
+    font-family:"Work Sans";
+    font-size:12px;
+    text-align: justify;
+}
+
+.intro-register ol{
+    width:80%
+}
+
+.intro-register #search-input{
+    border-radius:1em;
+    border: none;
+    padding:.5em;
+    color: #000;
+    background: #e6472a;
+    font-family: "Work Sans";
+    font-weight:800;
+}
+
+#dropdown-search a{
+    color: #4552d4;
+    font-family: "Work Sans";
+    text-decoration: none;
+    display:inline-block;
+    border-bottom:1px #4552d4 solid;
+}
+
+#dropdown-search a:hover{
+    color:#ff713e;
 }
 
 .register-area a{
@@ -299,6 +337,7 @@ a{
     position:absolute;
     max-width:40%;
     overflow:hidden;
+    display:none;
 }
 
 .reg-projectimg img{
@@ -308,9 +347,10 @@ a{
 .reg-projectbox{
     position:absolute;
     width:400px;
-    background:#faf8f4;
+    background-image:url(../img/bgdark.jpg);
     padding:1em;
     z-index:9;
+    color: #fff;
 }
 
 .reg-projectbox a{
@@ -319,6 +359,8 @@ a{
     display:inline-block;
     width:100px;
     text-align: center;
+    color:#fff;
+    text-decoration: none;
     
 }
 
@@ -332,6 +374,35 @@ a{
     margin-top: .5em;
 }
 
+.register-directory{
+    padding:1em;
+}
+
+.register-directory a{
+    display:inline-block;
+    width:150px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom:1px solid #fabd40;
+    padding:.1em;
+    color: #fabd40;
+    margin:.1em;
+    font-family: "Work Sans";
+}
+
+.register-directory a:hover{
+    color:blue;
+}
+
+.p-main{
+    color:#fff !important;
+    text-indent: 20px;
+}
+
+
+#dropdown-search{
+    
+}
 
 /* =========================
             MENU
@@ -339,6 +410,51 @@ a{
 
 #main-menu{
     z-index:9999;
+}
+
+#main-menu-close{
+    margin:.75em;
+    right: 0;
+    top: 0;
+    display:inline;
+    position:fixed;
+    float:right;
+}
+
+#main-menu-content{
+    background: #e6472a;    
+}
+
+#main-menu-content a{
+    color:white;
+    display:inline-block;
+    text-align: center;
+}
+
+#main-menu-content a:hover{
+    color:#fabd40;
+}
+
+#main-menu-content h3{
+    margin:0;
+}
+
+#main-menu .sub-link{
+    font-family:"Work Sans";
+    margin: 0;
+    color:#fabd40;
+}
+
+#main-menu-content .navigation-details{
+    font-family: "Work Sans";
+    margin:0;
+    font-size:18px;
+}
+
+#main-menu a p{
+    margin:0;
+    font-size:18px;
+    font-family: "Work Sans";
 }
 
 /* ==========================================================================
