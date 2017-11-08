@@ -1,6 +1,5 @@
 new WOW().init();
 
-
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -43,7 +42,6 @@ var menu_popup = document.getElementById('main-menu')
 var menu_close = document.getElementById("main-menu-close")
 
 menu_trigger.onclick = function () {
-    alert("click");
     $("#main-menu").fadeIn();
 }
             
