@@ -138,11 +138,23 @@ a{
     z-index:99;
     right:0;
     margin:.5em;
+    height:150px;
+}
+
+#header img{
+    max-height:100%;
+    max-width:100%;
 }
 
 #header-icon{
     float:left;
-    width:10%;
+    height:100px;
+    left:0;
+    position:fixed;
+}
+
+#header-icon img{
+    max-height:100px;
 }
 
 #header h1{
@@ -163,8 +175,7 @@ a{
 
 #modal-icon {
     z-index:99;
-	width: 10%;
-	height: 10%;
+    height:80px;    
 	float: right;
 }
 
@@ -203,7 +214,8 @@ a{
 
 .close {
 	color: #AAAAAA;
-	font-size: 28px;
+	font-size: 32px;
+    height:100px;
 	float: right;
 	font-weight: bold;
 	font-family: "Oxygen";
@@ -260,6 +272,12 @@ a{
     font-weight:800;
 }
 
+#dropdown-search{
+    height: 70px;
+    overflow-y:scroll;
+    overflow-x:none;
+}
+
 #dropdown-search a{
     color: #4552d4;
     font-family: "Work Sans";
@@ -313,13 +331,14 @@ a{
    ========================================================================== */
 
 .reg-bundle{
-    width:80%;
-    padding:1em;
-    align-content: center;
-    align-self: center;
-    min-height:150px;
-    max-height:250px;
     position:relative;
+    left:0;
+    min-height:120px;
+    margin-top:2em;
+    margin-bottom:2em;
+    width:100%;
+    max-width:700px;
+    overflow:auto;
 }
 
 .reg-details strong{
@@ -346,9 +365,14 @@ a{
 }
 
 .reg-projectbox{
-    position:absolute;
+    position:relative;
     z-index:9;
+    max-width:500px;
+    background-image:url(../img/bgdark.jpg);
     color: #fff;
+    border:1px solid #fff;
+    padding:1em;
+    box-shadow:5px 5px 0 #fff;
 }
 
 .reg-projectbox a{
@@ -358,18 +382,21 @@ a{
     width:100px;
     text-align: center;
     color:#fff;
+    font-weight:600;
     text-decoration: none;
     
 }
 
 .reg-projectbox h2{
     font-family:"Rubik Mono One";
+    font-weight:100;
     margin: 0;
 }
 
 .reg-projectbox p{
     font-family:"Work Sans";
     margin-top: 1em;
+    font-size:12px;
 }
 
 .register-directory{
@@ -385,6 +412,7 @@ a{
     padding:.1em;
     color: #fabd40;
     margin:.1em;
+    font-size:11px;
     font-family: "Work Sans";
 }
 
@@ -399,7 +427,12 @@ a{
 
 
 .register-links{
-    max-width:800px;
+    position:absolute;
+    left:50%;
+    box-sizing: border-box;
+    margin-left:-50%;
+    width:100%;
+    padding:2em;
 }
 
 /* =========================
@@ -417,6 +450,7 @@ a{
     display:inline;
     position:fixed;
     float:right;
+    height:100px;
 }
 
 #main-menu-content{
