@@ -19,7 +19,7 @@ $('a[href*="#"]')
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        $('html, body, .container').animate({
+        $('html, body, .container, .register-links').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
           // Callback after animation
@@ -39,7 +39,7 @@ $('a[href*="#"]')
 
 var menu_trigger = document.getElementById('modal-icon')
 var menu_popup = document.getElementById('main-menu')
-var menu_close = document.getElementById("main-menu-close")
+var menu_clxose = document.getElementById("main-menu-close")
 
 menu_trigger.onclick = function () {
     $("#main-menu").fadeIn();

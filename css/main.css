@@ -118,6 +118,10 @@ a{
     text-align: center;
 }
 
+.sponsorimages img{
+    width:100px;
+}
+
 .box{
 	display:block;
 	max-width:100%;
@@ -403,7 +407,9 @@ a{
     font-family:"Work Sans";
     font-weight:800;
     display:inline-block;
-    width:100px;
+    min-width:100px;
+    padding-right:.5em;
+    padding-left:.5em;
     text-align: center;
     color:#fff;
     font-weight:600;
