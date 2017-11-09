@@ -139,6 +139,20 @@ a{
     right:0;
     margin:.5em;
     height:150px;
+    width:100%;
+}
+
+#header-title{
+    position:relative;
+    left:50%;
+    width:200px;
+    margin-left:-100px !important;
+    color:white !important;
+    text-align:center;
+}
+
+#header-title h1{
+    text-align:center;
 }
 
 #header img{
